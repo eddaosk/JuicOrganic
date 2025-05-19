@@ -1,1 +1,1 @@
-# JuicOrganics
+# JuicOrganic
