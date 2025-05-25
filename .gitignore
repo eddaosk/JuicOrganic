@@ -139,3 +139,6 @@ dist
 /css/style.css.map
 /scss/style.css
 /scss/style.css.map
+
+# Mac clutter
+DS_Store
