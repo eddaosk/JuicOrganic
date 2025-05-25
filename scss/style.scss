@@ -1,3 +1,76 @@
+// SCSS colour palette
+
+// primary colours
+$color-primary: #F778A9; //icons
+$color-secondary: #6C1F41; //nav bar
+$color-accent: #9C4400; // + & - button
+
+$color-orange: #EE6F3E; // logo orange and stempelkort
+
+
 body {
-  background-color: beige;
+  background-image: url("/img/background.png");
+}
+
+
+// header
+
+.jo-header {
+  position: relative;
+  height: 200px;
+}
+.jo-top-logo {
+  text-align:center;
+  padding-top: 100px;
+
+}
+.jo-lang-btn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  border: none;
+}
+
+// main
+
+main {
+  > div:last-child {
+    margin-bottom: 130px;
+  }
+}
+
+// footer
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  nav {
+    background-color: $color-secondary;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    div {
+      display: flex;
+      justify-content: center;
+
+      .jo-footer-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 50px;
+        }
+      }
+
+      .jo-footer-nav-active {
+        background-color: white;
+        border-radius: 100%;
+        height: 75px;
+        width: 75px;
+      }
+    }
+  }
 }
