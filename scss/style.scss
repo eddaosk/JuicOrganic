@@ -8,12 +8,17 @@ $color-accent: #9C4400; // + & - button
 
 $color-orange: #EE6F3E; // logo orange and stempelkort
 
+//font
+$font-primary: 'gelica', sans-serif;
+
+
 
 body {
   background: $bg-gradient;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  font-family: $font-primary;
 }
 
 
@@ -137,12 +142,10 @@ h2{
 //main
 // footer
 
-
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-
 
   nav {
     background-color: $color-secondary;
@@ -152,7 +155,6 @@ footer {
     div {
       display: flex;
       justify-content: center;
-      align-items: center;
 
       .jo-footer-img-container {
         display: flex;
@@ -172,4 +174,11 @@ footer {
       }
     }
   }
+}
+
+
+//kurv
+
+.scan-bottle-btn {
+  background-color: $color-primary;
 }
