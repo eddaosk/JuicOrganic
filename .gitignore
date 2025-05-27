@@ -141,4 +141,4 @@ dist
 /scss/style.css.map
 
 # Mac clutter
-DS_Store
+.DS_Store
