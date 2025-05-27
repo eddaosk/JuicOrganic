@@ -27,11 +27,113 @@
 
 <!-- main goes here -->
 <main>
-
+<!-- Fresia -->
     <div class="container">
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="productGrid">
             <div class="col-?">
-        CONTENT HERE
+
+                <!-- produkt array -->
+        <script>
+            const products =[
+                {
+                    id: 'aeblbemost',
+                    title: 'Æblemost',
+                    description: 'Økologisk æblemost lavet fra koncentrat',
+                    size: [
+                        { label: '20 cl', price: 5 },
+                        { label: '50 cl', price: 16},
+                        { label: '250 ml', price: 20},
+                        { label: '500 ml', price: 30},
+                    ]
+                },
+                {
+                    id: 'rabarber',
+                    title: 'Rabarberdrik',
+                    description: 'Økologisk rabarbersaft er en ufiltreret saft, presset af friskhøstede, solmodne økologiske rabarber – intet er tilsat',
+                    size: [
+                        { label: '20 cl', price: 5},
+                        { label: '50 cl', price: 16},
+                        { label: '250 ml', price: 20},
+                        { label: '500 ml', price: 30},
+                    ]
+                },
+                {
+                    id: 'appelsin',
+                    title: 'Appelsin juice',
+                    description: 'økologisk appelsinjuice er presset af økologiske appelsiner',
+                    size: [
+                        { label: '20 cl', price: 5},
+                        { label: '25 cl', price: 10},
+                        { label: '50 cl', price: 16},
+                        { label: '250 ml', price: 20},
+                        { label: '500 ml', price: 30},
+                        ]
+                },
+                {
+                    id: 'hyldeblomst',
+                    title: 'Hyldeblomstdrik',
+                    description: 'Økologisk hyldeblomstdrik er fremstillet af økologisk hyldeblomst udtræk',
+                    size: [
+                        { label: '20 cl', price: 5},
+                        { label: '50 cl', price: 16},
+                        { label: '250 ml', price: 20},
+                        { label: '500 ml', price: 30},
+                    ]
+                },
+                {
+                    id: 'vand',
+                    title: 'Vand',
+                    description: 'Naturligt kildevand er rent vand, der udspringer fra underjordiske kilder og filtreres gennem naturlige jordlag',
+                    size: [
+                        { label: '50 cl', price: 16},
+                    ]
+                },
+                {
+                    id: 'hyldeblomst',
+                    title: 'Hyldeblomstdrik',
+                    description: 'Økologisk hyldeblomstdrik er fremstillet af økologisk hyldeblomst udtræk',
+                    size: [
+                        { label: '20 cl', price: 5},
+                        { label: '50 cl', price: 16},
+                        { label: '250 ml', price: 20},
+                        { label: '500 ml', price: 30},
+                    ]
+                },
+                {
+                    id: 'aeblejuice',
+                    title: 'Æble juice',
+                    description: 'økologisk æblejuice på den klassiske og populære 25 cl. Brik med sugerør',
+                    size: [
+                        { label: '25 cl', price: 10},
+                    ]
+                },
+                {
+                    id: 'gingerlemon',
+                    title: 'Økologisk ginger lemon shot',
+                    description: 'Økologisk citron shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær',
+                    size: [
+                        { label: '6 cl', price: 10},
+                    ]
+                },
+                {
+                    id: 'gingerrabarber',
+                    title: 'Økologisk ginger rabarber shot',
+                    description: 'Økologisk rabarber shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær',
+                    size: [
+                        { label: '6 cl', price: 10},
+                    ]
+                },
+            ]
+            <!--DOM metode-->
+            const grid = document.getElementById('productGrid');
+
+            <!--Loop-->
+            products.forEach(products => {
+
+                const col = document.createElement('div');
+                col.className = 'col-sm-6 col-lg-4 mb-4';
+            })
+        </script>
             </div>
         </div>
     </div>

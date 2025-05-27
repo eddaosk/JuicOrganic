@@ -1,6 +1,7 @@
 // SCSS colour palette
 
 // primary colours
+$bg-gradient: linear-gradient(to bottom right, #f8a8c5, #f9d0af);
 $color-primary: #F778A9; //icons
 $color-secondary: #6C1F41; //nav bar
 $color-accent: #9C4400; // + & - button
@@ -13,7 +14,10 @@ $font-primary: 'gelica', sans-serif;
 
 
 body {
-  background-image: url("/img/background.svg");
+  background: $bg-gradient;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   font-family: $font-primary;
 }
 
@@ -66,6 +70,54 @@ main {
     margin-bottom: 130px;
   }
 }
+
+
+// betal side
+
+h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: #511c3c;
+  font-size: 1.5rem;
+}
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  p {
+    font-weight: bold;
+    color: #511c3c;
+  }
+
+  .qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: auto;
+  }
+}
+
+.betalings-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+
+
+
+
+
 
 // footer
 
