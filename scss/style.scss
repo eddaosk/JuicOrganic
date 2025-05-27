@@ -9,7 +9,8 @@ $color-orange: #EE6F3E; // logo orange and stempelkort
 
 
 body {
-  background-image: url("/img/background.png");
+  background-image: url("/img/background.svg");
+
 }
 
 
@@ -30,6 +31,29 @@ body {
   right: 50px;
   border: none;
 }
+
+.home-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  span {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #000;
+  }
+}
+
 
 // main
 
