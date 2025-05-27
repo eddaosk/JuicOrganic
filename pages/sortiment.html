@@ -196,7 +196,6 @@
                 plus.addEventListener('click', () => {
                     let val = parseInt(count.textContent);
                     count.textContent = val + 1;
-                });
 
                 const cart = JSON.parse(localStorage.getItem('cart')) || [];
                 cart.push({
@@ -213,11 +212,11 @@
                 sizeRow.appendChild(sizeCol);
             });
 
-                cardBody.appendChild(sizeRow);
-                card.appendChild(img);
-                card.appendChild(cardBody);
-                col.appendChild(card);
-                grid.appendChild(col);
+            cardBody.appendChild(sizeRow);
+            card.appendChild(img);
+            card.appendChild(cardBody);
+            col.appendChild(card);
+            grid.appendChild(col);
             });
         </script>
 <!--/Fresia-->
