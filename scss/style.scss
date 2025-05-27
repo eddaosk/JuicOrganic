@@ -7,10 +7,14 @@ $color-accent: #9C4400; // + & - button
 
 $color-orange: #EE6F3E; // logo orange and stempelkort
 
+//font
+$font-primary: 'gelica', sans-serif;
+
+
 
 body {
   background-image: url("/img/background.svg");
-
+  font-family: $font-primary;
 }
 
 
@@ -97,4 +101,11 @@ footer {
       }
     }
   }
+}
+
+
+//kurv
+
+.scan-bottle-btn {
+  background-color: $color-primary;
 }
