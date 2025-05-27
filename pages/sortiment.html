@@ -200,6 +200,16 @@
                     count.textContent = val + 1;
                 });
 
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({
+                    id: product.id,
+                    title: product.title,
+                    size: size.label,
+                    price: size.price
+                });
+                localStorage.setItem('cart', JSON.stringify(cart));
+            });
+
                 btnGroup.append(minus, count, plus);
                 sizeCol.append(price, label, btnGroup);
                 sizeRow.appendChild(sizeCol);
