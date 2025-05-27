@@ -200,6 +200,7 @@
                     count.textContent = val + 1;
                 });
 
+                /*gemmer data i localstorage*/
                 const cart = JSON.parse(localStorage.getItem('cart')) || [];
                 cart.push({
                     id: product.id,
