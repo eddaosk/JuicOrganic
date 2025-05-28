@@ -11,6 +11,9 @@ $color-orange: #EE6F3E; // logo orange and stempelkort
 //font
 $font-primary: 'gelica', sans-serif;
 
+// IPad pro 11 størrelse
+
+
 
 
 body {
@@ -231,7 +234,27 @@ h2{
   margin-top: 10px;
 }
 
+// Fyld op video side
 
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 834px;
+  height: 1194px;
+  cursor: pointer;
+  z-index: 1;
+}
 
 //main
 // footer
