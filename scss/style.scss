@@ -133,12 +133,6 @@ h2{
   }
 }
 
-
-
-
-
-
-
 //main
 // footer
 
@@ -177,8 +171,12 @@ footer {
 }
 
 
-//kurv
+//kurv edda
 
 .scan-bottle-btn {
   background-color: $color-primary;
+}
+
+.betal-btn-fixed {
+    background-color: $color-secondary;
 }
