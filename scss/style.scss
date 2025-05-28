@@ -11,6 +11,9 @@ $color-orange: #EE6F3E; // logo orange and stempelkort
 //font
 $font-primary: 'gelica', sans-serif;
 
+// IPad pro 11 størrelse
+
+
 
 
   body {
@@ -22,7 +25,21 @@ $font-primary: 'gelica', sans-serif;
   }
 
 
+
   // header
+
+header {
+  margin-bottom: 60px;
+}
+
+.jo-header {
+  position: relative;
+  height: 200px;
+}
+.jo-top-logo {
+  text-align:center;
+  padding-top: 20px;
+
 
   .jo-header {
     position: relative;
@@ -94,6 +111,7 @@ $font-primary: 'gelica', sans-serif;
     box-shadow: none;
   }
 
+
   .container-products {
     padding-bottom: 100px;
     margin-bottom: 60px;
@@ -106,6 +124,28 @@ $font-primary: 'gelica', sans-serif;
     overflow: hidden;
     height: 308px;
     object-fit: cover;
+
+h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: #511c3c;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+
+  p {
+    font-weight: bold;
+    color: #511c3c;
+    font-size: 32px;
+
   }
 
   //gayane
@@ -118,7 +158,34 @@ $font-primary: 'gelica', sans-serif;
     margin-top: 2rem;
     color: #511c3c;
     font-size: 1.5rem;
+    width: 250px;
+    height: auto;
   }
+}
+
+.betalings-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  img {
+    width: 240px;
+    height: auto;
+  }
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 140px;
+
+  img{
+    width: 40px;
+    height: auto;
+  }
+
 
   .payment-option {
     display: flex;
@@ -140,17 +207,118 @@ $font-primary: 'gelica', sans-serif;
     }
   }
 
+// Still din dunk klar side
+
+ .instruction {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-size: 48px;
+   color: #511c3c;
+   font-weight: bold;
+   margin: 250px;
+
+    font-family: "gelica", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+   
+ }
+
+
   .betalings-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
 
+
     img {
       width: 80px;
       height: auto;
     }
   }
+
+.next-button {
+  padding: 17px 90px;
+  margin: 32px auto 0;
+  background-color: #511c3c;
+  color: white;
+  text-decoration: none;
+  font: 900 24px "Gelica", sans-serif;
+  border-radius: 14px;
+}
+
+ .next-button:hover {
+   background-color: #3b122c;
+ }
+
+// afslutnings side
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 190px;
+
+}
+
+.orange-icon {
+  width: 120px;
+  margin-top: -50px;
+  margin-bottom: 60px;
+}
+
+.receipt-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #511c3c;
+  margin-bottom: 10px;
+  margin-top: 100px
+}
+
+.arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 2rem;
+  color: #511c3c;
+}
+
+.receipt-icon {
+  width: 200px;
+  margin-top: 10px;
+}
+
+// Fyld op video side
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 834px;
+  height: 1194px;
+  cursor: pointer;
+  z-index: 1;
+}
+
 
 
   //main
