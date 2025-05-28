@@ -100,7 +100,8 @@ h2{
   align-items: center;
   margin-top: 2rem;
   color: #511c3c;
-  font-size: 1.5rem;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .payment-option {
@@ -111,13 +112,14 @@ h2{
   p {
     font-weight: bold;
     color: #511c3c;
+    font-size: 24px;
   }
 
   .qr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 250px;
     height: auto;
   }
 }
@@ -128,10 +130,52 @@ h2{
   align-items: center;
   margin-top: 2rem;
   img {
-    width: 80px;
+    width: 240px;
     height: auto;
   }
 }
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width: 40px;
+    height: auto;
+  }
+}
+
+// Still din dunk klar side
+
+ .instruction {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-size: 48px;
+   color: #511c3c;
+   margin-bottom: 100px;
+   font-weight: bold;
+
+    font-family: "gelica", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+ }
+
+.next-button {
+  padding: 17px 90px;
+  margin: 32px auto 0;
+  background-color: #511c3c;
+  color: white;
+  text-decoration: none;
+  font: 900 24px "Gelica", sans-serif;
+  border-radius: 14px;
+}
+
+ .next-button:hover {
+   background-color: #3b122c;
+ }
+
+
 
 //main
 // footer
