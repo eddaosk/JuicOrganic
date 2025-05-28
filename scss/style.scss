@@ -13,173 +13,182 @@ $font-primary: 'gelica', sans-serif;
 
 
 
-body {
-  background: $bg-gradient;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  body {
+    background: $bg-gradient;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-  font-family: $font-primary;
-}
-
-
-// header
-
-.jo-header {
-  position: relative;
-  height: 200px;
-}
-.jo-top-logo {
-  text-align:center;
-  padding-top: 100px;
-
-}
-.jo-lang-btn {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  border: none;
-}
-
-.home-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  img {
-    width: 40px;
-    height: 40px;
+    font-family: $font-primary;
   }
 
-  span {
-    margin-top: 4px;
-    font-size: 0.85rem;
-    color: #000;
+
+  // header
+
+  .jo-header {
+    position: relative;
+    height: 200px;
   }
-}
+  .jo-top-logo {
+    text-align: center;
+    padding-top: 100px;
 
-
-// main
-
-main {
-  > div:last-child {
-    margin-bottom: 130px;
   }
-}
-
-
-//fresia
-// sortiment
-
-.card {
-  border-radius: 10px;
-  border: 1px solid #000;
-  background: rgba(255, 255, 255, 0.80);
-  background-blend-mode: overlay;
-  box-shadow: 0px 4px 20px 0px rgba(139, 0, 72, 0.10);
-  width: 349px;
-  height: 560px;
-  flex-shrink: 0;
-}
-
-.btn:focus, .btn:active {
-  outline: none;
-  box-shadow: none;
-}
-
-.container-products {
-  padding-bottom: 100px;
-  margin-bottom: 60px;
-}
-
-//gayane
-// betal side
-
-h2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  color: #511c3c;
-  font-size: 1.5rem;
-}
-
-.payment-option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  p {
-    font-weight: bold;
-    color: #511c3c;
+  .jo-lang-btn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    border: none;
   }
 
-  .qr {
+  .home-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    height: auto;
+    text-decoration: none;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    span {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: #000;
+    }
   }
-}
 
-.betalings-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  img {
-    width: 80px;
-    height: auto;
+
+  // main
+
+  main {
+    > div:last-child {
+      margin-bottom: 130px;
+    }
   }
-}
 
 
+  //fresia
+  // sortiment
+
+  .card {
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.80);
+    background-blend-mode: overlay;
+    box-shadow: 0px 4px 20px 0px rgba(139, 0, 72, 0.10);
+    width: 349px;
+    height: 560px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
 
 
+  .btn:focus, .btn:active {
+    outline: none;
+    box-shadow: none;
+  }
 
+  .container-products {
+    padding-bottom: 100px;
+    margin-bottom: 60px;
+  }
 
+  .card-img-top {
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 308px;
+    object-fit: cover;
+  }
 
-//main
-// footer
+  //gayane
+  // betal side
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    color: #511c3c;
+    font-size: 1.5rem;
+  }
 
-  nav {
-    background-color: $color-secondary;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+  .payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 
-    div {
+    p {
+      font-weight: bold;
+      color: #511c3c;
+    }
+
+    .qr {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      height: auto;
+    }
+  }
 
-      .jo-footer-img-container {
+  .betalings-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    img {
+      width: 80px;
+      height: auto;
+    }
+  }
+
+
+  //main
+  // footer
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    nav {
+      background-color: $color-secondary;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+
+      div {
         display: flex;
-        align-items: center;
         justify-content: center;
 
-        img {
-          height: 50px;
-        }
-      }
+        .jo-footer-img-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-      .jo-footer-nav-active {
-        background-color: white;
-        border-radius: 100%;
-        height: 75px;
-        width: 75px;
+          img {
+            height: 50px;
+          }
+        }
+
+        .jo-footer-nav-active {
+          background-color: white;
+          border-radius: 100%;
+          height: 75px;
+          width: 75px;
+        }
       }
     }
   }
-}
 
 
 //kurv
