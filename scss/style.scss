@@ -5,6 +5,7 @@ $bg-gradient: linear-gradient(to bottom right, #f8a8c5, #f9d0af);
 $color-primary: #F778A9; //icons
 $color-secondary: #6C1F41; //nav bar
 $color-accent: #9C4400; // + & - button
+$color-green: #AACC96;
 
 $color-orange: #EE6F3E; // logo orange and stempelkort
 
@@ -269,7 +270,7 @@ footer {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
-    div {
+    > div {
       display: flex;
       justify-content: center;
 
@@ -289,6 +290,19 @@ footer {
         height: 75px;
         width: 75px;
       }
+
+      .jo-cart-count {
+        position: absolute;
+        top: -2px;
+        right: -10px;
+        background-color: $color-green;
+        color: $color-secondary;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+        min-width: 20px;
+        text-align: center;
+      }
     }
   }
 }
@@ -298,8 +312,78 @@ footer {
 
 .scan-bottle-btn {
   background-color: $color-primary;
+
+ &:hover {
+  background-color: $color-orange;
+  }
 }
 
-.betal-btn-fixed {
-    background-color: $color-secondary;
+.btn-pay {
+  @extend .next-button;
+  display: inline-block;
+  background-color: $color-secondary;
+  &:hover {
+    background-color: $color-orange;
+  }
+}
+
+#basket-container {
+  background-color: white;
+  border-radius: 20px;
+}
+
+// BASKET ITEM STYLES
+
+.jo-basketitem-card {
+  background: #fff;
+  font-family: $font-primary;
+  min-height: 168px;
+}
+
+.jo-basketitem-img {
+  width: 90px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background: rgba(0,0,0,0.03);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+.jo-basketitem-title {
+  color: $color-secondary;
+  font-size: 1.3rem;
+}
+
+.jo-basketitem-size {
+  color: #222;
+  font-size: 1rem;
+}
+
+.jo-basketitem-price {
+  color: $color-secondary;
+  margin-top: .8em;
+  font-size: 1.12rem;
+}
+
+.jo-basketitem-controls {
+  min-width: 8rem;
+}
+
+.jo-qty-btn {
+  font-family: $font-primary;
+  font-size: 1.35rem;
+  min-width: 2.7rem;
+  min-height: 2.5rem;
+  font-weight: bold;
+  border: none;
+
+  &.jo-qty-count {
+    background: #fff;
+    color: #000;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+    border: none;
+    min-width: 2.7rem; // match sizing
+  }
 }
