@@ -179,7 +179,8 @@ products.forEach((product) => {
                 id: product.id,
                 title: product.title,
                 size: size.label,
-                price: size.price
+                price: size.price,
+                imgUrl: product.image
             });
             localStorage.setItem('cart', JSON.stringify(cart));
         });
