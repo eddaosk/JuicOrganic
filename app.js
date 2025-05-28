@@ -149,11 +149,16 @@ products.forEach((product) => {
 
         minus.addEventListener("click", () => {
             let productCount = parseInt(count.textContent);
-            if (productCount > 0) count.textContent = productCount - 1;
+            const basketCounter = document.getElementById("jo-basket-counter")
+            if (productCount > 0) {
+                count.textContent = productCount - 1;
+                let basketCounterInt = parseInt(basketCounter.textContent);
+                basketCounter.textContent = basketCounterInt - 1;
+            }
 
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             for (let i = 0; i < cart.length; i++) {
-                if (cart[i].id == product.id && cart[i].size == size.label) {
+                if (cart[i].id === product.id && cart[i].size === size.label) {
                     cart.splice(i, 1);
                     break;
                 }
@@ -164,6 +169,10 @@ products.forEach((product) => {
         plus.addEventListener("click", () => {
             let productCount = parseInt(count.textContent);
             count.textContent = productCount + 1;
+
+            const basketCounter = document.getElementById("jo-basket-counter")
+            let basketCounterInt = parseInt(basketCounter.textContent);
+            basketCounter.textContent = basketCounterInt + 1;
 
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             cart.push({
