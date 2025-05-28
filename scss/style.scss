@@ -11,6 +11,9 @@ $color-orange: #EE6F3E; // logo orange and stempelkort
 //font
 $font-primary: 'gelica', sans-serif;
 
+// IPad pro 11 størrelse
+
+
 
 
 body {
@@ -24,13 +27,17 @@ body {
 
 // header
 
+header {
+  margin-bottom: 60px;
+}
+
 .jo-header {
   position: relative;
   height: 200px;
 }
 .jo-top-logo {
   text-align:center;
-  padding-top: 100px;
+  padding-top: 20px;
 
 }
 .jo-lang-btn {
@@ -100,7 +107,7 @@ h2{
   align-items: center;
   margin-top: 2rem;
   color: #511c3c;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -108,11 +115,12 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 70px;
+
   p {
     font-weight: bold;
     color: #511c3c;
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .qr {
@@ -128,7 +136,7 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 100px;
   img {
     width: 240px;
     height: auto;
@@ -139,11 +147,15 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
+  margin-bottom: 140px;
+
   img{
     width: 40px;
     height: auto;
   }
 }
+
 
 // Still din dunk klar side
 
@@ -153,13 +165,15 @@ h2{
    text-align: center;
    font-size: 48px;
    color: #511c3c;
-   margin-bottom: 100px;
    font-weight: bold;
+   margin: 250px;
 
     font-family: "gelica", sans-serif;
     font-weight: 900;
     font-style: normal;
+   
  }
+
 
 .next-button {
   padding: 17px 90px;
@@ -175,7 +189,72 @@ h2{
    background-color: #3b122c;
  }
 
+// afslutnings side
 
+.thanks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 190px;
+
+}
+
+.orange-icon {
+  width: 120px;
+  margin-top: -50px;
+  margin-bottom: 60px;
+}
+
+.receipt-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #511c3c;
+  margin-bottom: 10px;
+  margin-top: 100px
+}
+
+.arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 2rem;
+  color: #511c3c;
+}
+
+.receipt-icon {
+  width: 200px;
+  margin-top: 10px;
+}
+
+// Fyld op video side
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 834px;
+  height: 1194px;
+  cursor: pointer;
+  z-index: 1;
+}
 
 //main
 // footer
