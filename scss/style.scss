@@ -298,8 +298,22 @@ footer {
 
 .scan-bottle-btn {
   background-color: $color-primary;
+
+ &:hover {
+  background-color: $color-orange;
+  }
 }
 
-.betal-btn-fixed {
-    background-color: $color-secondary;
+.btn-pay {
+  @extend .next-button;
+  display: inline-block;
+  background-color: $color-secondary;
+  &:hover {
+    background-color: $color-orange;
+  }
+}
+
+.basket-container {
+  background-color: white;
+  border-radius: 20px;
 }
