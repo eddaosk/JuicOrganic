@@ -91,39 +91,22 @@ header {
 
   //fresia
   // sortiment
+.card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+}
+.btn:focus, .btn:active {
+  outline: none;
+  box-shadow: none;
+}
 
-  .card {
-    border-radius: 10px;
-    border: 1px solid #000;
-    background: rgba(255, 255, 255, 0.80);
-    background-blend-mode: overlay;
-    box-shadow: 0px 4px 20px 0px rgba(139, 0, 72, 0.10);
-    width: 349px;
-    height: 560px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .btn:focus, .btn:active {
-    outline: none;
-    box-shadow: none;
-  }
-
-
-  .container-products {
-    padding-bottom: 100px;
-    margin-bottom: 60px;
-  }
-
-  .card-img-top {
-    width: 100%;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    height: 308px;
-    object-fit: cover;
+.container-products {
+  padding-bottom: 100px;
+  margin-bottom: 60px;
+}
+//fresia afslut
 
 h2{
   display: flex;
