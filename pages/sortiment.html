@@ -1,263 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Sortiment</title>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sortiment</title>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/erp8dea.css" />
+</head>
+<body>
+<header class="container">
+    <div class="d-flex align-items-center justify-content-between py-3">
+        <a href="../index.html" class="home-icon">
+            <img src="../img/home_button.svg" alt="Icon" />
+            <span>Startside</span>
+        </a>
+        <h1 class="jo-top-logo m-0 text-center">
+            <img src="../../img/logo_header.png" alt="Juice Organic Logo" width="600" />
+        </h1>
+        <div style="width: 60px"></div>
+    </div>
+</header>
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/style.css" />
-        <link rel="stylesheet" href="https://use.typekit.net/erp8dea.css">   <!-- Gelica font -->
-    </head>
-    <body>
-        <!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
-
-        <header class="container">
-            <div class="d-flex align-items-center justify-content-between py-3">
-                <a href="../index.html" class="home-icon">
-                    <img src="../img/home_button.svg" alt="Icon">
-                    <span>Startside</span>
-                </a>
-
-                <h1 class="jo-top-logo m-0 text-center">
-                    <img src="../../img/logo_header.png" alt="Juice Organic Logo" width="600">
-                </h1>
-
-                <div style="width: 60px;"></div>
-            </div>
-        </header>
-
-<!-- Fresia -->
 <main>
     <div class="container container-products py-4">
         <div class="row row-cols-1 row-cols-sm-2 g-4" id="productGrid"></div>
     </div>
 </main>
-    <!-- produkt array -->
-        <script>
-            const products = [
-                    {
-                        id: 'aeblbemost',
-                        title: 'Æblemost',
-                        description: 'Økologisk æblemost lavet fra koncentrat',
-                        size: [
-                            {label: '20 cl', price: 5},
-                            {label: '50 cl', price: 16},
-                        ],
-                        image: '/img/applemost.jpg',
-                    },
 
-                    {
-                        id: 'rabarber',
-                        title: 'Rabarberdrik',
-                        description: 'Økologisk rabarbersaft er en ufiltreret saft, presset af friskhøstede, solmodne økologiske rabarber – intet er tilsat',
-                        size: [
-                            {label: '20 cl', price: 5},
-                            {label: '50 cl', price: 16},
-                        ],
-                        image: '/img/rabarber.jpg',
-                    },
-
-                    {
-                        id: 'appelsin',
-                        title: 'Appelsin juice',
-                        description: 'økologisk appelsinjuice er presset af økologiske appelsiner',
-                        size: [
-                            {label: '20 cl', price: 5},
-                            {label: '25 cl', price: 10},
-                            {label: '50 cl', price: 16},
-                        ],
-                        image: '/img/appelsin_juice.jpg',
-                    },
-
-                    {
-                        id: 'hyldeblomst',
-                        title: 'Hyldeblomstdrik',
-                        description: 'Økologisk hyldeblomstdrik er fremstillet af økologisk hyldeblomst udtræk',
-                        size: [
-                            {label: '20 cl', price: 5},
-                            {label: '50 cl', price: 16},
-                        ],
-                        image: '/img/hyldeblomst.jpg',
-                    },
-
-                    {
-                        id: 'vand',
-                        title: 'Vand',
-                        description: 'Naturligt kildevand er rent vand, der udspringer fra underjordiske kilder og filtreres gennem naturlige jordlag',
-                        size: [
-                            {label: '50 cl', price: 16},
-                        ],
-                        image: '/img/vand.jpg',
-                    },
-
-                    {
-                        id: 'aeblejuice',
-                        title: 'Æble juice',
-                        description: 'økologisk æblejuice på den klassiske og populære 25 cl. Brik med sugerør',
-                        size: [
-                            {label: '25 cl', price: 10},
-                        ],
-                        image: '/img/apple_juice.jpg',
-                    },
-
-                    {
-                        id: 'gingerlemon',
-                        title: 'Økologisk ginger lemon shot',
-                        description: 'Økologisk citron shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær',
-                        size: [
-                            {label: '6 cl', price: 10},
-                        ],
-                        image: '/img/lemon_shot.jpg',
-                    },
-
-                    {
-                        id: 'gingerrabarber',
-                        title: 'Økologisk ginger rabarber shot',
-                        description: 'Økologisk rabarber shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær',
-                        size: [
-                            {label: '6 cl', price: 10},
-                        ],
-                        image: '/img/rabarber_shot.jpg',
-                    },
-                ];
-
-
-            /*DOM metode*/
-            const grid = document.getElementById('productGrid');
-
-            /* for each Loop*/
-            products.forEach(product => {
-                const col = document.createElement('div');
-                col.className = 'col';
-
-            const card = document.createElement('div');
-            card.className = 'card h-100 shadow';
-
-            /*billede*/
-            const img = document.createElement('img');
-            img.className = 'card-img-top';
-            img.src = product.image;
-            img.alt = product.title;
-
-            /*card body*/
-            const cardBody = document.createElement('div');
-            cardBody.className = 'card-body';
-
-            /*title til kort*/
-            const title = document.createElement('h4')
-            title.className = 'card-title';
-            title.textContent = product.title;
-
-            /*produkt beskrivelse*/
-            const desc = document.createElement('p');
-            desc.className = 'card-text';
-            desc.textContent = product.description;
-
-            cardBody.appendChild(title);
-            cardBody.appendChild(desc);
-
-            const sizeRow = document.createElement('div');
-            sizeRow.className = 'row';
-
-            product.size.forEach((size) => {
-                const sizeCol = document.createElement('div')
-                sizeCol.className = 'col-6 mb-2';
-
-                const label = document.createElement('span');
-                label.textContent = size.label;
-
-                const price = document.createElement('p')
-                price.className = 'mb-1';
-                price.innerHTML = `<strong>Dkk${size.price}</strong>`;
-
-                const btnGroup = document.createElement('div');
-                btnGroup.className = 'btn-group ms-2';
-                btnGroup.setAttribute('role', 'group');
-                btnGroup.setAttribute('aria-label', `${size.label} tæller`);
-
-                const minus = document.createElement('button');
-                minus.className = 'btn btn-outline-secondary';
-                minus.textContent = '−';
-
-                const count = document.createElement('button');
-                count.className = 'btn btn-outline-secondary';
-                count.textContent = '0';
-                count.disabled = true;
-
-                const plus = document.createElement('button');
-                plus.className = 'btn btn-outline-secondary';
-                plus.textContent = '+';
-
-                minus.addEventListener('click', () => {
-                    let val = parseInt(count.textContent);
-                    if (val > 0) count.textContent = val - 1;
-                });
-
-                plus.addEventListener('click', () => {
-                    let val = parseInt(count.textContent);
-                    count.textContent = val + 1;
-
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                cart.push({
-                    id: product.id,
-                    title: product.title,
-                    size: size.label,
-                    price: size.price
-                });
-                localStorage.setItem('cart', JSON.stringify(cart));
-            });
-
-                btnGroup.append(minus, count, plus);
-                sizeCol.append(price, label, btnGroup);
-                sizeRow.appendChild(sizeCol);
-            });
-
-            cardBody.appendChild(sizeRow);
-            card.appendChild(img);
-            card.appendChild(cardBody);
-            col.appendChild(card);
-            grid.appendChild(col);
-            });
-        </script>
-<!--/Fresia-->
-
-        </main>
-
-
-        <footer>
-            <div class="container">
-                <nav class="row p-3">
-                    <div class="col-3">
-                        <a href="../index.html" class="jo-footer-img-container" aria-label="Hjem">
-                            <div class="jo-footer-img-container">
-                                <img src="../img/home_icon.png" alt="Hjem" />
-                            </div>
-                        </a>
+<footer>
+    <div class="container">
+        <nav class="row p-3">
+            <div class="col-3">
+                <a href="../index.html" class="jo-footer-img-container" aria-label="Hjem">
+                    <div class="jo-footer-img-container">
+                        <img src="../img/home_icon.png" alt="Hjem" />
                     </div>
-                    <div class="col-3">
-                        <a href="drikkedunk.html" class="jo-footer-img-container" aria-label="Drikkedunk">
-                            <div class="jo-footer-img-container">
-                                <img src="../img/drikkedunk_icon.png" alt="Drikkedunk" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#" class="jo-footer-img-container jo-footer-nav-active" aria-label="Sortiment">
-                            <div class="jo-footer-img-container">
-                                <img src="../img/sortiment_icon.png" alt="Sortiment" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="kurv.html" class="jo-footer-img-container" aria-label="Kurv">
-                            <div class="jo-footer-img-container">
-                                <img src="../img/kurv_icon.png" alt="Kurv" />
-                            </div>
-                        </a>
-                    </div>
-                </nav>
+                </a>
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+            <div class="col-3">
+                <a href="drikkedunk.html" class="jo-footer-img-container" aria-label="Drikkedunk">
+                    <div class="jo-footer-img-container">
+                        <img src="../img/drikkedunk_icon.png" alt="Drikkedunk" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="jo-footer-img-container jo-footer-nav-active" aria-label="Sortiment">
+                    <div class="jo-footer-img-container">
+                        <img src="../img/sortiment_icon.png" alt="Sortiment" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-3 position-relative">
+                <a href="kurv.html" class="jo-footer-img-container" aria-label="Kurv">
+                    <div class="jo-footer-img-container position-relative">
+                        <img src="../img/kurv_icon.png" alt="Kurv" />
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    class Product {
+        constructor(id, title, description, sizes, image) {
+            this.id = id;
+            this.title = title;
+            this.description = description;
+            this.size = sizes;
+            this.image = image;
+        }
+    }
+
+    const products = [
+        new Product('aeblbemost', 'Æblemost', 'Økologisk æblemost lavet fra koncentrat', [
+            { label: '20 cl', price: 5 },
+            { label: '50 cl', price: 16 },
+        ], '/img/applemost.jpg'),
+
+        new Product('rabarber', 'Rabarberdrik', 'Økologisk rabarbersaft er en ufiltreret saft, presset af friskhøstede, solmodne økologiske rabarber – intet er tilsat', [
+            { label: '20 cl', price: 5 },
+            { label: '50 cl', price: 16 },
+        ], '/img/rabarber.jpg'),
+
+        new Product('appelsin', 'Appelsin juice', 'Økologisk appelsinjuice er presset af økologiske appelsiner', [
+            { label: '20 cl', price: 5 },
+            { label: '25 cl', price: 10 },
+            { label: '50 cl', price: 16 },
+        ], '/img/appelsin_juice.jpg'),
+
+        new Product('hyldeblomst', 'Hyldeblomstdrik', 'Økologisk hyldeblomstdrik er fremstillet af økologisk hyldeblomst udtræk', [
+            { label: '20 cl', price: 5 },
+            { label: '50 cl', price: 16 },
+        ], '/img/hyldeblomst.jpg'),
+
+        new Product('vand', 'Vand', 'Naturligt kildevand er rent vand, der udspringer fra underjordiske kilder og filtreres gennem naturlige jordlag', [
+            { label: '50 cl', price: 16 },
+        ], '/img/vand.jpg'),
+
+        new Product('aeblejuice', 'Æble juice', 'Økologisk æblejuice på den klassiske og populære 25 cl. Brik med sugerør', [
+            { label: '25 cl', price: 10 },
+        ], '/img/apple_juice.jpg'),
+
+        new Product('gingerlemon', 'Økologisk ginger lemon shot', 'Økologisk citron shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær', [
+            { label: '6 cl', price: 10 },
+        ], '/img/lemon_shot.jpg'),
+
+        new Product('gingerrabarber', 'Økologisk ginger rabarber shot', 'Økologisk rabarber shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær', [
+            { label: '6 cl', price: 10 },
+        ], '/img/rabarber_shot.jpg'),
+    ];
+
+    function updateCart(productId, sizeLabel, price, change) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const index = cart.findIndex(item => item.id === productId && item.size === sizeLabel);
+
+        if (index !== -1) {
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) cart.splice(index, 1);
+        } else if (change > 0) {
+            cart.push({ id: productId, size: sizeLabel, price: price, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateBadge();
+    }
+
+    function getCartQuantity(productId, sizeLabel) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const item = cart.find(p => p.id === productId && p.size === sizeLabel);
+        return item ? item.quantity : 0;
+    }
+
+    function updateBadge() {
+        const badge = document.getElementById('cart-badge');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+        badge.textContent = total;
+        badge.style.display = total > 0 ? 'inline-block' : 'none';
+    }
+
+    updateBadge();
+
+    const grid = document.getElementById('productGrid');
+
+    products.forEach(product => {
+        const col = document.createElement('div');
+        col.className = 'col-6';
+
+        const card = document.createElement('div');
+        card.className = 'card h-100 shadow';
+
+        const img = document.createElement('img');
+        img.className = 'card-img-top';
+        img.src = product.image;
+        img.alt = product.title;
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+
+        const title = document.createElement('h4');
+        title.className = 'card-title';
+        title.textContent = product.title;
+
+        const desc = document.createElement('p');
+        desc.className = 'card-text';
+        desc.textContent = product.description;
+
+        cardBody.appendChild(title);
+        cardBody.appendChild(desc);
+
+        const sizeRow = document.createElement('div');
+        sizeRow.className = 'row';
+
+        product.size.forEach(size => {
+            const sizeCol = document.createElement('div');
+            sizeCol.className = 'col-6';
+
+            const price = document.createElement('p');
+            price.className = 'mb-1';
+            price.innerHTML = `<strong>Dkk${size.price}</strong>`;
+
+            const label = document.createElement('span');
+            label.textContent = size.label;
+
+            const btnGroup = document.createElement('div');
+            btnGroup.className = 'btn-group ms-2';
+
+            const minus = document.createElement('button');
+            minus.className = 'btn btn-outline-secondary';
+            minus.textContent = '−';
+
+            const count = document.createElement('button');
+            count.className = 'btn btn-outline-secondary';
+            count.disabled = true;
+            count.textContent = getCartQuantity(product.id, size.label);
+
+            const plus = document.createElement('button');
+            plus.className = 'btn btn-outline-secondary';
+            plus.textContent = '+';
+
+            minus.addEventListener('click', () => {
+                let val = parseInt(count.textContent) || 0;
+                if (val > 0) {
+                    val--;
+                    count.textContent = val;
+                    updateCart(product.id, size.label, size.price, -1);
+                }
+            });
+
+            plus.addEventListener('click', () => {
+                let val = parseInt(count.textContent) || 0;
+                val++;
+                count.textContent = val;
+                updateCart(product.id, size.label, size.price, 1);
+            });
+
+            btnGroup.append(minus, count, plus);
+            sizeCol.append(price, label, btnGroup);
+            sizeRow.appendChild(sizeCol);
+        });
+
+        cardBody.appendChild(sizeRow);
+        card.appendChild(img);
+        card.appendChild(cardBody);
+        col.appendChild(card);
+        grid.appendChild(col);
+    });
+</script>
+</body>
 </html>
