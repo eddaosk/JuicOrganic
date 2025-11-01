@@ -40,7 +40,7 @@
                 <div id="empty-basket" class="row">
                     <!-- if empty basket -->
                     <div class="col-12 text-center">
-                        <img src="/img/kurv_icon.png" alt="Tom Kurv ikon" width="80" />
+                        <img src="../img/kurv_icon.png" alt="Tom Kurv ikon" width="80" />
                         <p>Din kurv er tøm</p>
                     </div>
                 </div>
@@ -162,29 +162,6 @@
                     basketItemCol.appendChild(basketItemCard);
                     basketItemRow.appendChild(basketItemCol);
                     basketItemsContainer.appendChild(basketItemRow);
-                });
-            }
-            const cartContainer = document.getElementById("cartItems");
-
-            // Clear previous content (in case)
-            cartContainer.innerHTML = "";
-
-            // Show message if cart is empty
-            if (cartItems.length === 0) {
-                cartContainer.innerHTML = '<p class="text-center">Din kurv er tom.</p>';
-            } else {
-                // Loop through each item in the cart and create display elements
-                cartItems.forEach((item) => {
-                    const row = document.createElement("div");
-                    row.className = "row border-bottom py-2 align-items-center";
-
-                    row.innerHTML = `
-        <div class="col-6"><strong>${item.title}</strong> (${item.size})</div>
-        <div class="col-3 text-center">x${item.quantity}</div>
-        <div class="col-3 text-end">DKK ${item.price * item.quantity}</div>
-      `;
-
-                    cartContainer.appendChild(row);
                 });
             }
         </script>

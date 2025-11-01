@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>betalingsside</title>
+    <head>
+        <meta charset="UTF-8" />
+        <title>betalingsside</title>
 
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/erp8dea.css" />
+        <!-- Gelica font -->
+    </head>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/erp8dea.css">   <!-- Gelica font -->
-</head>
+    <body>
+        <!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
 
-<body>
+        <header class="container">
+            <div class="d-flex align-items-center justify-content-between py-3">
+                <a href="../index.html" class="home-icon">
+                    <img src="../img/home_button.svg" alt="Icon" />
+                    <span>Startside</span>
+                </a>
 
-<!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
+                <h1 class="jo-top-logo m-0 text-center">
+                    <img src="../img/logo_header.png" alt="Juice Organic Logo" width="600" />
+                </h1>
 
+                <div style="width: 60px"></div>
+            </div>
+        </header>
 
-<header class="container">
-    <div class="d-flex align-items-center justify-content-between py-3">
-        <a href="../index.html" class="home-icon">
-            <img src="../img/home_button.svg" alt="Icon">
-            <span>Startside</span>
-        </a>
+        <!-- main goes here -->
 
-        <h1 class="jo-top-logo m-0 text-center">
-            <img src="../img/logo_header.png" alt="Juice Organic Logo" width="600">
-        </h1>
-
-        <div style="width: 60px;"></div>
-    </div>
-</header>
-
-<!-- main goes here -->
-
-
-
-    <div>
-        <div class="container">
-    <h2>Vælg din ønskede betalingsmetode</h2>
+        <div>
+            <div class="container">
+                <h2>Vælg din ønskede betalingsmetode</h2>
+            </div>
+            <div class="payment-option">
+                <p>Mobilepay</p>
+                <img src="../img/qrkode.png" alt="MobilePay QR kode" class="qr" />
+            </div>
         </div>
-    <div class="payment-option">
-        <p>Mobilepay</p>
-        <img src="../img/qrkode.png" alt="MobilePay QR kode" class="qr">
+
+        <div class="betalings-icon">
+            <img src="../img/scan.png" alt="Kontaktløs betaling" />
         </div>
-    </div>
 
-    <div class="betalings-icon">
-        <img src="../img/scan.png" alt="Kontaktløs betaling">
-    </div>
+        <div class="arrow">
+            <img src="../img/pilvektor.png" alt="pil mod trådløsbetaling" />
+        </div>
 
-     <div class="arrow">
-         <img src="/img/pilvektor.png" alt="pil mod trådløsbetaling">
-     </div>
+        <script>
+            localStorage.removeItem("cart");
+        </script>
 
-
-<script>
-    localStorage.removeItem('cart');
-</script>
-
-<script src="../app.js"></script>
-</body>
-
+        <script src="../app.js"></script>
+    </body>
 </html>
