@@ -218,7 +218,7 @@ h2{
   font-weight: bold;
   color: #511c3c;
   margin-bottom: 10px;
-  margin-top: 100px
+  margin-top: 10px;
 }
 
 .arrow-down {
@@ -332,7 +332,7 @@ footer {
   border-radius: 20px;
 }
 
-// BASKET ITEM STYLES
+// BASKET ITEM STYLES - edda
 
 .jo-basketitem-card {
   background: #fff;
@@ -385,5 +385,16 @@ footer {
     box-shadow: none;
     border: none;
     min-width: 2.7rem; // match sizing
+  }
+}
+
+#pauseOverlay {
+  z-index: 9999;
+  background: $bg-gradient;
+  color: white;
+  cursor: pointer;
+
+  p {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
 }

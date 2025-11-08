@@ -171,7 +171,7 @@ h2 {
   font-weight: bold;
   color: #511c3c;
   margin-bottom: 10px;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .arrow-down {
@@ -319,6 +319,16 @@ footer nav > div .jo-cart-count {
   box-shadow: none;
   border: none;
   min-width: 2.7rem;
+}
+
+#pauseOverlay {
+  z-index: 9999;
+  background: linear-gradient(to bottom right, #f8a8c5, #f9d0af);
+  color: white;
+  cursor: pointer;
+}
+#pauseOverlay p {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 /*# sourceMappingURL=style.css.map */

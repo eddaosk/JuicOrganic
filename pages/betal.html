@@ -11,11 +11,11 @@
     </head>
 
     <body>
-        <!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
+        <!-- Gayane (Edda JS) -->
 
         <header class="container">
             <div class="d-flex align-items-center justify-content-between py-3">
-                <a href="../index.html" class="home-icon">
+                <a href="../index.html?skipVideo=true" class="home-icon">
                     <img src="../img/home_button.svg" alt="Icon" />
                     <span>Startside</span>
                 </a>
@@ -34,6 +34,12 @@
             <div class="container">
                 <h2>Vælg din ønskede betalingsmetode</h2>
             </div>
+
+            <!-- countdown -->
+            <div class="container text-center my-4">
+                <h3>Du bliver sendt videre om <span id="countdown">10</span> sekunder...</h3>
+            </div>
+
             <div class="payment-option">
                 <p>Mobilepay</p>
                 <img src="../img/qrkode.png" alt="MobilePay QR kode" class="qr" />
@@ -47,6 +53,21 @@
         <div class="arrow">
             <img src="../img/pilvektor.png" alt="pil mod trådløsbetaling" />
         </div>
+
+        <script>
+            // countdown
+            let seconds = 10;
+            const countdownElement = document.getElementById("countdown");
+
+            const countdown = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    window.location.href = "../pages/afslutning.html";
+                }
+            }, 1000);
+        </script>
 
         <script>
             localStorage.removeItem("cart");

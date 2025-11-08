@@ -11,11 +11,11 @@
     </head>
 
     <body>
-        <!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
+        <!-- Header and Footer code skeleton for all pages coded by Edda with help of AI for suggestions and bootstrap classes-->
 
         <header class="container">
             <div class="d-flex align-items-center justify-content-between py-3">
-                <a href="../index.html" class="home-icon">
+                <a href="../index.html?skipVideo=true" class="home-icon">
                     <img src="../img/home_button.svg" alt="Icon" />
                     <span>Startside</span>
                 </a>
@@ -32,7 +32,7 @@
         <main>
             <!-- scan JO dunk -->
             <div class="container">
-                <button type="button" class="btn btn-light btn-outline-light scan-bottle-btn mb-4">Scan din JuicOrganic Drikkedunk</button>
+                <a href="stilldindunk.html" class="btn btn-light btn-outline-light scan-bottle-btn mb-4">Scan din JuicOrganic Drikkedunk</a>
             </div>
 
             <!-- BASKET -->
@@ -41,7 +41,7 @@
                     <!-- if empty basket -->
                     <div class="col-12 text-center">
                         <img src="../img/kurv_icon.png" alt="Tom Kurv ikon" width="80" />
-                        <p>Din kurv er tøm</p>
+                        <p>Din kurv er tom</p>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="container">
                 <nav class="row p-3">
                     <div class="col-3">
-                        <a href="../index.html" class="jo-footer-img-container" aria-label="Hjem">
+                        <a href="../index.html?skipVideo=true" class="jo-footer-img-container" aria-label="Hjem">
                             <div class="jo-footer-img-container">
                                 <img src="../img/home_icon.png" alt="Hjem" />
                             </div>
@@ -93,6 +93,7 @@
             // Get cart data from localStorage or empty array if none
             const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
+            // remove empty basket if items in basket
             if (cartItems.length > 0) {
                 const emptyBasketElement = document.querySelector("#empty-basket");
                 emptyBasketElement.remove();

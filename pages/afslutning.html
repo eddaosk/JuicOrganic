@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/tdh8yrn.css" />
     </head>
     <body>
-        <!-- Header and Footer code skeleton for all sites coded by Edda with help of AI for suggestions and bootstrap classes-->
+        <!-- Gayane (Edda JS) -->
 
         <header class="container">
             <div class="row">
@@ -35,6 +35,26 @@
                     <img src="../img/kvit.png" alt="kvittering" class="receipt-icon" />
                 </div>
             </div>
+
+            <!-- countdown -->
+            <div class="container text-center my-4">
+                <h3>Tilbage til start om <span id="countdown">10</span> sekunder...</h3>
+            </div>
         </main>
+
+        <script>
+            // countdown
+            let seconds = 10;
+            const countdownElement = document.getElementById("countdown");
+
+            const countdown = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    window.location.href = "../index.html";
+                }
+            }, 1000);
+        </script>
     </body>
 </html>

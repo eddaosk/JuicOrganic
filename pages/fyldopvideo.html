@@ -10,10 +10,21 @@
         <link rel="stylesheet" href="https://use.typekit.net/tdh8yrn.css" />
     </head>
     <body>
-        <video class="video-bg" autoplay muted loop playsinline>
+        <!-- Gayane (Edda JS) -->
+
+        <video class="video-bg" autoplay muted playsinline>
             <source src="../img/fill-up.mp4" type="video/mp4" />
         </video>
 
         <a class="overlay-link" href="afslutning.html"></a>
+
+        <script>
+            //listens for video end and navigates to "afslutning"
+            const video = document.querySelector(".video-bg");
+
+            video.addEventListener("ended", () => {
+                window.location.href = "afslutning.html";
+            });
+        </script>
     </body>
 </html>
