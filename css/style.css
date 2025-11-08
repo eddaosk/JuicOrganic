@@ -1,32 +1,9 @@
-// SCSS colour palette
-
-// primary colours
-$bg-gradient: linear-gradient(to bottom right, #f8a8c5, #f9d0af);
-$color-primary: #F778A9; //icons
-$color-secondary: #6C1F41; //nav bar
-$color-accent: #9C4400; // + & - button
-$color-green: #AACC96;
-
-$color-orange: #EE6F3E; // logo orange and stempelkort
-
-//font
-$font-primary: 'gelica', sans-serif;
-
-// IPad pro 11 størrelse
-
-
-
-
 body {
-  background: $bg-gradient;
+  background: linear-gradient(to bottom right, #f8a8c5, #f9d0af);
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  font-family: $font-primary;
+  font-family: "gelica", sans-serif;
 }
-
-
-// header
 
 header {
   margin-bottom: 60px;
@@ -36,11 +13,12 @@ header {
   position: relative;
   height: 200px;
 }
-.jo-top-logo {
-  text-align:center;
-  padding-top: 20px;
 
+.jo-top-logo {
+  text-align: center;
+  padding-top: 20px;
 }
+
 .jo-lang-btn {
   position: absolute;
   top: 30px;
@@ -57,31 +35,20 @@ header {
   background: none;
   border: none;
   cursor: pointer;
-
-  img {
-    width: 40px;
-    height: 40px;
-  }
-
-  span {
-    margin-top: 4px;
-    font-size: 0.85rem;
-    color: #000;
-  }
+}
+.home-icon img {
+  width: 40px;
+  height: 40px;
+}
+.home-icon span {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #000;
 }
 
-
-// main
-
-main {
-  > div:last-child {
-    margin-bottom: 130px;
-  }
+main > div:last-child {
+  margin-bottom: 130px;
 }
-
-
-//fresia
-// sortiment
 
 .card {
   background-color: #fff;
@@ -89,6 +56,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 }
+
 .btn:focus, .btn:active {
   outline: none;
   box-shadow: none;
@@ -99,10 +67,7 @@ main {
   margin-bottom: 60px;
 }
 
-//gayane
-// betal side
-
-h2{
+h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,20 +82,18 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 70px;
-
-  p {
-    font-weight: bold;
-    color: #511c3c;
-    font-size: 32px;
-  }
-
-  .qr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height: auto;
-  }
+}
+.payment-option p {
+  font-weight: bold;
+  color: #511c3c;
+  font-size: 32px;
+}
+.payment-option .qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: auto;
 }
 
 .betalings-icon {
@@ -138,10 +101,10 @@ h2{
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  img {
-    width: 240px;
-    height: auto;
-  }
+}
+.betalings-icon img {
+  width: 240px;
+  height: auto;
 }
 
 .arrow {
@@ -150,33 +113,26 @@ h2{
   align-items: center;
   margin-top: 40px;
   margin-bottom: 140px;
-
-  img{
-    width: 40px;
-    height: auto;
-  }
+}
+.arrow img {
+  width: 40px;
+  height: auto;
 }
 
+.instruction {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 48px;
+  color: #511c3c;
+  font-weight: bold;
+  margin: 250px;
+  font-family: "gelica", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 
-// Still din dunk klar side
-
- .instruction {
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   font-size: 48px;
-   color: #511c3c;
-   font-weight: bold;
-   margin: 250px;
-
-    font-family: "gelica", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-   
- }
-
-
-.next-button {
+.next-button, .btn-pay {
   padding: 17px 90px;
   margin: 32px auto 0;
   background-color: #511c3c;
@@ -186,11 +142,9 @@ h2{
   border-radius: 14px;
 }
 
- .next-button:hover {
-   background-color: #3b122c;
- }
-
-// afslutnings side
+.next-button:hover, .btn-pay:hover {
+  background-color: #3b122c;
+}
 
 .thanks {
   display: flex;
@@ -201,7 +155,6 @@ h2{
   color: white;
   margin-bottom: 20px;
   margin-top: 190px;
-
 }
 
 .orange-icon {
@@ -218,14 +171,13 @@ h2{
   font-weight: bold;
   color: #511c3c;
   margin-bottom: 10px;
-  margin-top: 100px
+  margin-top: 100px;
 }
 
 .arrow-down {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   font-size: 2rem;
   color: #511c3c;
 }
@@ -234,8 +186,6 @@ h2{
   width: 200px;
   margin-top: 10px;
 }
-
-// Fyld op video side
 
 .video-bg {
   position: fixed;
@@ -257,74 +207,60 @@ h2{
   z-index: 1;
 }
 
-//main
-// footer
-
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-
-  nav {
-    background-color: $color-secondary;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-
-    > div {
-      display: flex;
-      justify-content: center;
-
-      .jo-footer-img-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          height: 50px;
-        }
-      }
-
-      .jo-footer-nav-active {
-        background-color: white;
-        border-radius: 100%;
-        height: 75px;
-        width: 75px;
-      }
-
-      .jo-cart-count {
-        position: absolute;
-        top: -2px;
-        right: -10px;
-        background-color: $color-green;
-        color: $color-secondary;
-        border-radius: 50%;
-        padding: 2px 6px;
-        font-size: 12px;
-        min-width: 20px;
-        text-align: center;
-      }
-    }
-  }
+}
+footer nav {
+  background-color: #6C1F41;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+footer nav > div {
+  display: flex;
+  justify-content: center;
+}
+footer nav > div .jo-footer-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer nav > div .jo-footer-img-container img {
+  height: 50px;
+}
+footer nav > div .jo-footer-nav-active {
+  background-color: white;
+  border-radius: 100%;
+  height: 75px;
+  width: 75px;
+}
+footer nav > div .jo-cart-count {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  background-color: #AACC96;
+  color: #6C1F41;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  min-width: 20px;
+  text-align: center;
 }
 
-
-//kurv edda
-
 .scan-bottle-btn {
-  background-color: $color-primary;
-
- &:hover {
-  background-color: $color-orange;
-  }
+  background-color: #F778A9;
+}
+.scan-bottle-btn:hover {
+  background-color: #EE6F3E;
 }
 
 .btn-pay {
-  @extend .next-button;
   display: inline-block;
-  background-color: $color-secondary;
-  &:hover {
-    background-color: $color-orange;
-  }
+  background-color: #6C1F41;
+}
+.btn-pay:hover {
+  background-color: #EE6F3E;
 }
 
 #basket-container {
@@ -332,11 +268,9 @@ footer {
   border-radius: 20px;
 }
 
-// BASKET ITEM STYLES
-
 .jo-basketitem-card {
   background: #fff;
-  font-family: $font-primary;
+  font-family: "gelica", sans-serif;
   min-height: 168px;
 }
 
@@ -345,12 +279,12 @@ footer {
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-  background: rgba(0,0,0,0.03);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 .jo-basketitem-title {
-  color: $color-secondary;
+  color: #6C1F41;
   font-size: 1.3rem;
 }
 
@@ -360,8 +294,8 @@ footer {
 }
 
 .jo-basketitem-price {
-  color: $color-secondary;
-  margin-top: .8em;
+  color: #6C1F41;
+  margin-top: 0.8em;
   font-size: 1.12rem;
 }
 
@@ -370,20 +304,21 @@ footer {
 }
 
 .jo-qty-btn {
-  font-family: $font-primary;
+  font-family: "gelica", sans-serif;
   font-size: 1.35rem;
   min-width: 2.7rem;
   min-height: 2.5rem;
   font-weight: bold;
   border: none;
-
-  &.jo-qty-count {
-    background: #fff;
-    color: #000;
-    cursor: default;
-    pointer-events: none;
-    box-shadow: none;
-    border: none;
-    min-width: 2.7rem; // match sizing
-  }
 }
+.jo-qty-btn.jo-qty-count {
+  background: #fff;
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+  border: none;
+  min-width: 2.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
