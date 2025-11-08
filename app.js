@@ -10,7 +10,7 @@ const products = [
             { label: "20 cl", price: 5 },
             { label: "50 cl", price: 16 },
         ],
-        image: "/img/applemost.jpg",
+        image: "../img/applemost.jpg",
     },
 
     {
@@ -21,7 +21,7 @@ const products = [
             { label: "20 cl", price: 5 },
             { label: "50 cl", price: 16 },
         ],
-        image: "/img/rabarber.jpg",
+        image: "../img/rabarber.jpg",
     },
 
     {
@@ -33,7 +33,7 @@ const products = [
             { label: "25 cl", price: 10 },
             { label: "50 cl", price: 16 },
         ],
-        image: "/img/appelsin_juice.jpg",
+        image: "../img/appelsin_juice.jpg",
     },
 
     {
@@ -44,7 +44,7 @@ const products = [
             { label: "20 cl", price: 5 },
             { label: "50 cl", price: 16 },
         ],
-        image: "/img/hyldeblomst.jpg",
+        image: "../img/hyldeblomst.jpg",
     },
 
     {
@@ -52,7 +52,7 @@ const products = [
         title: "Vand",
         description: "Naturligt kildevand er rent vand, der udspringer fra underjordiske kilder og filtreres gennem naturlige jordlag",
         size: [{ label: "50 cl", price: 16 }],
-        image: "/img/vand.jpg",
+        image: "../img/vand.jpg",
     },
 
     {
@@ -60,7 +60,7 @@ const products = [
         title: "Æble juice",
         description: "økologisk æblejuice på den klassiske og populære 25 cl. Brik med sugerør",
         size: [{ label: "25 cl", price: 10 }],
-        image: "/img/apple_juice.jpg",
+        image: "../img/apple_juice.jpg",
     },
 
     {
@@ -68,7 +68,7 @@ const products = [
         title: "Økologisk ginger lemon shot",
         description: "Økologisk citron shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær",
         size: [{ label: "6 cl", price: 10 }],
-        image: "/img/lemon_shot.jpg",
+        image: "../img/lemon_shot.jpg",
     },
 
     {
@@ -76,7 +76,7 @@ const products = [
         title: "Økologisk ginger rabarber shot",
         description: "Økologisk rabarber shot er fremstillet til det danske klima hvor der ofte er behov for et ekstra shot af Ingefær",
         size: [{ label: "6 cl", price: 10 }],
-        image: "/img/rabarber_shot.jpg",
+        image: "../img/rabarber_shot.jpg",
     },
 ];
 
